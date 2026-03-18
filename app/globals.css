@@ -118,12 +118,18 @@
 
 @layer base {
   * {
-    @apply border-border outline-ring/50;
+    @apply border-border outline-none focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-offset-2 focus-visible:ring-sky-500;
   }
   body {
-    @apply bg-background text-foreground;
+    @apply bg-slate-50 text-slate-900 antialiased;
   }
   html {
-    @apply font-sans;
+    @apply scroll-smooth font-sans;
+  }
+  a {
+    @apply transition-colors duration-200;
+  }
+  button {
+    @apply font-medium;
   }
 }
